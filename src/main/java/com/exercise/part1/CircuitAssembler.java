@@ -3,6 +3,7 @@ package com.exercise.part1;
 import com.exercise.part1.handler.InputFileParser;
 
 import java.io.*;
+import java.util.Hashtable;
 
 /**
  * Created by Dennis on 2016-01-13.
@@ -11,14 +12,14 @@ public class CircuitAssembler
 {
     private static final String DEFAULT_INPUT_FILE_NAME = "input.txt";
 
-    public int assemblyCircuit(String inputFilePath) throws IOException
+    public Hashtable<String,Integer> assemblyCircuit(String inputFilePath) throws IOException
     {
         return parseInputFile(inputFilePath);
     }
 
-    private int parseInputFile(String inputFilePath) throws IOException
+    private Hashtable<String,Integer> parseInputFile(String inputFilePath) throws IOException
     {
-        return new InputFileParser().parseInputFile(loadInputFile(inputFilePath));
+        return new InputFileParser().parseInputFileAndExecuteOperation(loadInputFile(inputFilePath));
     }
 
     private File loadInputFile(String inputFilePath)
