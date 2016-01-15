@@ -20,7 +20,9 @@ public class InputFileReaderTest
     @Test
     public void testParsedNumberOfLinesEqualsToNumberOfLinesInDefaultFile() throws IOException
     {
-        Assert.assertTrue(NUMBER_OF_LINES_IN_DEFAULT_FILE == new CircuitAssembler().assemblyCircuit(null));
+        int circuitSize = new CircuitAssembler().assemblyCircuit(null).size();
+        Assert.assertTrue(circuitSize + " is not equal to " + NUMBER_OF_LINES_IN_DEFAULT_FILE,
+                NUMBER_OF_LINES_IN_DEFAULT_FILE == circuitSize );
     }
 
 
