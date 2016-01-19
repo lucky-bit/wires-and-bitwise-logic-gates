@@ -12,3 +12,7 @@ Step #2.1: Input file parsing mechanism created (based on Java regex).
 Step #2.2: UT + testing resources
 
 TODO in step #3: Required solution to handle situation when operation is performed on variables which are not defined/assigned yet (file content sore? Event listener?)
+
+Step #3: The issue described in TODO solved by using Observer pattern.
+
+Step #4: Gradle support added to the project.

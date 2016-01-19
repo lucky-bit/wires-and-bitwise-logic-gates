@@ -1,6 +1,6 @@
-package com.exercise.part1.handler;
+package com.exercise.handler;
 
-import com.exercise.part1.data.ParseResult;
+import com.exercise.data.ParseResult;
 
 /**
  * Created by Denis on 2016-01-15.

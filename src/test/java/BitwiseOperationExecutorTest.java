@@ -1,5 +1,5 @@
-import com.exercise.part1.data.ParseResult;
-import com.exercise.part1.handler.BitwiseOperationExecutor;
+import com.exercise.data.ParseResult;
+import com.exercise.handler.BitwiseOperationExecutor;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -11,6 +11,7 @@ import java.io.IOException;
 public class BitwiseOperationExecutorTest
 {
     @Test
+    @SuppressWarnings("unchecked")
     public void testAndOperation() throws IOException
     {
         int result = new BitwiseOperationExecutor().performAndOperation(new ParseResult(123, 456, "d"));
@@ -18,6 +19,7 @@ public class BitwiseOperationExecutorTest
     }
 
     @Test
+    @SuppressWarnings("unchecked")
     public void testOrOperation() throws IOException
     {
         int result = new BitwiseOperationExecutor().performOrOperation(new ParseResult(123, 456, "e"));
@@ -25,6 +27,7 @@ public class BitwiseOperationExecutorTest
     }
 
     @Test
+    @SuppressWarnings("unchecked")
     public void testNotOperation() throws IOException
     {
         int result = new BitwiseOperationExecutor().performNotOperation(new ParseResult(0, 123, "h"));
@@ -38,6 +41,7 @@ public class BitwiseOperationExecutorTest
     }
 
     @Test
+    @SuppressWarnings("unchecked")
     public void testRshiftOperation() throws IOException
     {
         int result = new BitwiseOperationExecutor().performRshiftOperation(new ParseResult(456, 2, "g"));
@@ -45,6 +49,7 @@ public class BitwiseOperationExecutorTest
     }
 
     @Test
+    @SuppressWarnings("unchecked")
     public void testLshiftOperation() throws IOException
     {
         int result = new BitwiseOperationExecutor().performLshiftOperation(new ParseResult(123, 2, "f"));

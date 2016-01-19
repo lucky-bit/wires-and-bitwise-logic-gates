@@ -1,4 +1,4 @@
-package com.exercise.part1.data;
+package com.exercise.data;
 
 /**
  *

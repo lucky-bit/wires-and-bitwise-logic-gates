@@ -1,7 +1,6 @@
-package com.exercise.part1;
+package com.exercise;
 
-import com.exercise.part1.handler.InputFileParser;
-
+import com.exercise.handler.InputFileParser;
 import java.io.*;
 import java.util.Hashtable;
 
@@ -10,19 +9,19 @@ import java.util.Hashtable;
  */
 public class CircuitAssembler
 {
-    private static final String DEFAULT_INPUT_FILE_NAME = "input.txt";
+    private static final String DEFAULT_INPUT_FILE_NAME = "com/exercise/input.txt";
 
-    public Hashtable<String,Integer> assemblyCircuit(String inputFilePath) throws IOException
+    public Hashtable<String,Integer> assemblyCircuit(String inputFilePath) throws Exception
     {
         return parseInputFile(inputFilePath);
     }
 
-    private Hashtable<String,Integer> parseInputFile(String inputFilePath) throws IOException
+    private Hashtable<String,Integer> parseInputFile(String inputFilePath) throws Exception
     {
-        return new InputFileParser().parseInputFileAndExecuteOperation(loadInputFile(inputFilePath));
+        return new InputFileParser().parseInputFileAndPerformOperation(loadInputFile(inputFilePath));
     }
 
-    private File loadInputFile(String inputFilePath)
+    private File loadInputFile(String inputFilePath) throws NullPointerException
     {
         if(inputFilePath != null && inputFilePath.length() > 0)
         {

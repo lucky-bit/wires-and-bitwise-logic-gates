@@ -1,4 +1,6 @@
-package com.exercise.part1;
+package com.exercise;
+
+import java.util.Hashtable;
 
 /**
  * Created by Dennis on 2016-01-13.
@@ -10,7 +12,8 @@ public class Main {
         String inputFilePath = getInputFilePath(args);
         try
         {
-            new CircuitAssembler().assemblyCircuit(inputFilePath);
+            Hashtable<String,Integer> circuit = new CircuitAssembler().assemblyCircuit(inputFilePath);
+            System.out.println("\n\nValue of a is " + circuit.get("a"));
         }
         catch (Exception ex)
         {
